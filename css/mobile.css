@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* height: 5000px; */
+}
+
+:root {
+  --primary: #000000;
+  --bg: #32cd32;
+}
+
+/* Media Queries */
+
+/* Laptop */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0;
+
+    height: 7rem;
+    /* background-color: blue; */
+  }
+
+  .sila {
+    font-size: small;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--bg);
+    width: 40%;
+    height: 100vh;
+    text-align: left;
+    transition: 0.3s;
+    z-index: 100;
+  }
+
+  .nav-item {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+  }
+
+  .quran {
+    text-align: justify;
+    padding: 0 2%;
+  }
+
+  .hadith {
+    text-align: justify;
+    height: 18rem;
+    padding: 0 2%;
+    /* background-color: aqua; */
+  }
+
+  .flex-item {
+    flex-basis: 100%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Footer */
+  .copyright {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    mix-blend-mode: difference;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+}
