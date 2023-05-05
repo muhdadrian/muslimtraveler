@@ -113,8 +113,10 @@ body {
   }
 
   /* Footer */
+  .footer-nav,
   .credit {
     font-weight: 500;
+    font-size: 1.5rem;
   }
 }
 
